@@ -129,7 +129,7 @@ if __name__ == "__main__":
         # print(payload_str)
 
         if payload.get("date") == get_today_date():
-            notify(f"今日已打卡：{payload.get('area')}", f"今日已打卡：{payload_str}")
+            notify(f"{payload.get('realname')}今日已打卡：{payload.get('area')}", f"今日已打卡：{payload_str}")
             sys.exit()
 
         time.sleep(5)
