@@ -136,9 +136,9 @@ if __name__ == "__main__":
         response = save(session, payload)
 
         if response.status_code == 200 and response.text == '{"e":0,"m":"操作成功","d":{}}':
-            notify(f"打卡成功：{payload.get('area')}", payload_str)
+            notify(f"{payload.get('realname')} 打卡成功：{payload.get('area')}", payload_str)
         else:
-            notify("打卡失败，请手动打卡", response.text)
+            notify(f"{payload.get('realname')}打卡失败，请手动打卡", response.text)
 
     except Exception as e:
-        notify("打卡失败，请手动打卡", str(e))
+        notify(f"{payload.get('realname')}打卡失败，请手动打卡", str(e))
