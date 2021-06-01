@@ -141,4 +141,5 @@ if __name__ == "__main__":
             notify(f"{payload.get('realname')}打卡失败，请手动打卡", response.text)
 
     except Exception as e:
-        notify(f"{payload.get('realname')}打卡失败，请手动打卡", str(e))
+#         notify(f"{payload.get('realname')}打卡失败，请手动打卡", str(e))
+        notify(f"{USERNAME}打卡失败，请手动打卡", str(e))
